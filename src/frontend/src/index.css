@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.75rem;
+    /* #F4F7FB - very light cool blue */
+    --background: 0.975 0.008 240;
+    /* white */
+    --foreground: 0.13 0.01 250;
+    /* white */
+    --card: 1 0 0;
+    --card-foreground: 0.13 0.01 250;
+    --popover: 1 0 0;
+    --popover-foreground: 0.13 0.01 250;
+    /* brand blue #2F80ED */
+    --primary: 0.56 0.19 250;
+    --primary-foreground: 1 0 0;
+    /* light secondary */
+    --secondary: 0.95 0.03 240;
+    --secondary-foreground: 0.56 0.19 250;
+    /* muted gray */
+    --muted: 0.97 0.005 240;
+    --muted-foreground: 0.52 0.012 250;
+    /* accent */
+    --accent: 0.95 0.03 240;
+    --accent-foreground: 0.13 0.01 250;
+    /* destructive */
+    --destructive: 0.577 0.245 27.325;
+    --destructive-foreground: 1 0 0;
+    --border: 0.92 0.01 240;
+    --input: 0.92 0.01 240;
+    --ring: 0.56 0.19 250;
+    /* status colors */
+    --status-pending: 0.75 0.18 60;
+    --status-in-progress: 0.56 0.19 250;
+    --status-completed: 0.72 0.18 160;
+    --status-rejected: 0.577 0.245 27.325;
+    /* sidebar */
+    --sidebar: 1 0 0;
+    --sidebar-foreground: 0.13 0.01 250;
+    --sidebar-primary: 0.56 0.19 250;
+    --sidebar-primary-foreground: 1 0 0;
+    --sidebar-accent: 0.95 0.03 240;
+    --sidebar-accent-foreground: 0.56 0.19 250;
+    --sidebar-border: 0.92 0.01 240;
+    --sidebar-ring: 0.56 0.19 250;
+    /* hero gradient colors */
+    --hero-from: #6ccbff;
+    --hero-to: #25c38a;
+    /* chart */
+    --chart-1: 0.56 0.19 250;
+    --chart-2: 0.72 0.18 160;
+    --chart-3: 0.75 0.18 60;
+    --chart-4: 0.577 0.245 27.325;
+    --chart-5: 0.65 0.2 290;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+}
+
+@layer utilities {
+  .hero-gradient {
+    background: linear-gradient(135deg, #6ccbff 0%, #2f80ed 40%, #25c38a 100%);
+  }
+
+  .card-shadow {
+    box-shadow: 0 2px 12px 0 oklch(0.13 0.01 250 / 0.08), 0 1px 3px 0
+      oklch(0.13 0.01 250 / 0.06);
+  }
+
+  .card-shadow-hover {
+    box-shadow: 0 8px 24px 0 oklch(0.13 0.01 250 / 0.12), 0 2px 6px 0
+      oklch(0.13 0.01 250 / 0.08);
+  }
+}
